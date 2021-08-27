@@ -2,7 +2,7 @@ require 'rspec'
 require_relative '../src/Golondrina'
 require_relative '../src/Guerra'
 
-describe 'golondrinas' do
+describe 'guerra' do
 
   let(:un_espadachin) {
     Espadachin.new(Espada.new(50))
