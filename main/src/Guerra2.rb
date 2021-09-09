@@ -151,6 +151,10 @@ class Peloton
     }
   end
 
+  def agregarIntegrante(integrante)
+    self.integrantes.push(integrante)
+  end
+
   def lastimado
     self.estrategia.call(self)
   end

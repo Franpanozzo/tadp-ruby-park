@@ -11,6 +11,10 @@ describe 'golondrinas' do
     Guerrero.new
   }
 
+  let(:un_guerrero3) {
+    Guerrero.new
+  }
+
   it 'un guerrero puede descansar como defensor y atacante' do
     un_guerrero.descansar
     expect(un_guerrero.energia).to eq(110)
@@ -29,6 +33,12 @@ describe 'golondrinas' do
     un_guerrero.lastimado()
     expect(un_guerrero.energia).to eq(30)
     expect(un_guerrero2.energia).to eq(100)
+  end
+
+  it 'agregar integrante a peloton' do
+    un_peloton = Peloton.descansador([un_guerrero,un_guerrero2])
+    un_peloton.agregarIntegrante(un_guerrero3)
+    expect(un_peloton.integrantes.include? un_guerrero3).to eq(true)
   end
 
 
