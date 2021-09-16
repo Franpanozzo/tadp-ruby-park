@@ -29,7 +29,7 @@ describe 'golondrinas' do
   end
 
   it 'def method en autoclase de atila 2'do
-    atila.singleton_class.send(:define_method, :saluda) {
+    atila.singleton_class.send(:define_method, :saluda) { ##TAMBIEN EN VEZ DEL SEND '.define_method' DIRECTAMENTE
       'Hola soy Atila'
     }
 
@@ -47,9 +47,6 @@ describe 'golondrinas' do
     atila.edad = 5
     expect(atila.edad).to eq(5)
   end
-
-
-
 
 
 end
